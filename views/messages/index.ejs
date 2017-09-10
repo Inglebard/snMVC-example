@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    
+    <% for (message of messages) { %>
+    <div>
+		<h2><%= message.getTitle() %></h2>
+		<p><%= message.getData() %></p>
+    </div>
+    <% } %>
+
+<% include ../partials/footer %>
