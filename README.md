@@ -12,3 +12,5 @@ npm install
 node app.js
 ```
 And go to your webbrowser [http://localhost:3000/messages](http://localhost:3000/messages).
+
+NB: Remove https config if issue on launch.

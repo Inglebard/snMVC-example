@@ -1,6 +1,19 @@
+var	fs = require('fs');
+
 module.exports = {
 	mode: 'prod',
-	port: 4000,
+	http :
+	{		
+		port: 4000,
+	},
+	https :
+	{		
+		port: 4001,
+		options : {
+			key: fs.readFileSync('./config/ssl/server.key'),
+    		cert: fs.readFileSync('./config/ssl/server.cert')
+		}
+	},
 	pre_app: [
 		"./vendors/app/test/preappfirst.js",
 	],
