@@ -1,17 +1,15 @@
-var	fs = require('fs');
-
 module.exports = {
 	mode: 'prod',
 	http :
-	{		
+	{
 		port: 4000,
 	},
 	https :
-	{		
+	{
 		port: 4001,
 		options : {
-			key: fs.readFileSync('./config/ssl/server.key'),
-    		cert: fs.readFileSync('./config/ssl/server.cert')
+			key: './config/ssl/server.key',
+    	cert: './config/ssl/server.cert'
 		}
 	},
 	pre_app: [
@@ -36,7 +34,7 @@ module.exports = {
 		"./vendors/app/bodyparser/bodyparser.js",
 		"./middlewares/app/toast/toast.js",
 		],
-		post_routing : [		
+		post_routing : [
 		"./vendors/app/test/postrouting.js",
 		],
 	},
