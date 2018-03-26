@@ -9,7 +9,7 @@ Just launch
 
 ```
 npm install
-node app.js
+npm start
 ```
 And go to your webbrowser [http://localhost:3000/messages](http://localhost:3000/messages).
 
